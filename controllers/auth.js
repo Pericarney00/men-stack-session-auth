@@ -29,6 +29,7 @@ router.post("/sign-up", async (req, res) => {
 });
 
 
+
 router.get("/sign-in", (req, res) => {
   res.render("auth/sign-in.ejs")
 });
@@ -54,6 +55,12 @@ router.post("/sign-in", async (req, res) => {
   res.redirect("/");
 });
 
+
+
+router.get("/sign-out", (req, res) => {
+  req.session.destroy();
+  res.redirect("/");
+});
 
 
 module.exports = router;

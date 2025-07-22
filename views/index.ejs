@@ -11,11 +11,15 @@
     
     <% if (user) { %>
       <h1>Welcome to the app, <%= user.username %>!</h1>
+      <a href="/auth/sign-out">Sign out</a>
     <% } else { %>
     <h1>Welcome to the app guest!</h1>
+    <p>
+          <a href="/auth/sign-up">Sign Up</a> or <a href="/auth/sign-in">Sign In</a>
+    </p>
     <% } %>
-    <a href="/auth/sign-up">Sign Up</a>
-    <a href="/auth/sign-in">Sign In</a>
+
+    
 
   </body>
 </html>
